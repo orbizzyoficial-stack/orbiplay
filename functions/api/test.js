@@ -1,6 +1,5 @@
-export async function onRequest(context) {
-  return new Response(
-    JSON.stringify({ ok: true, msg: "API funcionando ✅" }),
-    { headers: { "Content-Type": "application/json" } }
-  );
+export async function onRequest() {
+  return new Response(JSON.stringify({ ok: true, api: "on" }), {
+    headers: { "Content-Type": "application/json" },
+  });
 }
